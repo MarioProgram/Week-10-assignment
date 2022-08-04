@@ -4,12 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Budget maker</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
-    
-    <div class="alert alert-primary" role="alert">alert</div>
+    <div class="container">
+        <div class="card mt-4">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="budget-input">Monthly Budget</label>
+                            <input type="number" class="form-control" id="budget-input" placeholder="Budget">
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-lg-1 mt-4">
+                        <button id="budget-add" class="btn btn-primary form-control">Update</button>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <br>
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="new-task">Bill</label>
+                            <input type="text" class="form-control" id="new-task" placeholder="Bill Name">
+                        </div>
+                    </div>  
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="new-due">Amount Due</label>
+                            <input type="number" class="form-control" id="new-due" placeholder="Amount">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="new-due-date">Due Date</label>
+                            <input type="date" class="form-control" id="new-due-date">
+                        </div>
+                    </div>
+                    <div class="col-sm mt-4 fs-4">
+                        <p class="border border-info rounded">Total budget: <span id="budget-amount" class=""> </span> </p>
+                    </div>
+                </div>
+                <div class="col-md-2 col-lg-1 mt-3">
+                    <button id="add" class="btn btn-primary form-control">Create</button>
+                </div>    
+           </div>
+        </div>
+        <table class="table table-dark table-striped" id="list">
+            <tr>
+                <th>Bill</th>
+                <th>Amount Due</th>
+                <th>Due Date</th>
+                <th>Remaining budget</th>
+                <th>Remove</th>
+
+            </tr>
+        </table>
+    </div>
+    <script src="week-10-assignment.js"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
